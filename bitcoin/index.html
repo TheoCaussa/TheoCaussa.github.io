@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Page Bitcoin </title>						
+	</head>
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = this.responseText;
+        var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
+        document.getElementById("demo").innerHTML = jsonPretty;
+    }
+};
+xmlhttp.open("GET", "https://api.blockcypher.com/v1/btc/main", true);
+xmlhttp.send();
+    </script>
+	<body>
+		<h1>Explorateur Bitcoin</h1>
+		<h2>James BOND</h2>
+		<h2>Explorateur Bitcoin</h2>
+	</body>
+</html>
 
