@@ -26,7 +26,7 @@ $(document).ready(function() {
 		async : false,
 
 		success : function(data) {
-			$('#bitcoin_network_hash').append(data.time);
+			$('#bitcoin_network_hash').append(data.hash);
 		},
 
 		error : function(xhr, status, err) {
